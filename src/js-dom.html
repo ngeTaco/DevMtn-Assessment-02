@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit 2 Assessment: JS DOM</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        counter-reset: section;
+      }
+
+      section {
+        border: 1px solid black;
+        padding: 1em;
+        margin: 1em 0;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      section > h2:before {
+        counter-increment: section;
+        content: counter(section) '. ';
+      }
+
+      label[for='word'],
+      label[for='factorial-input'] {
+        display: block;
+      }
+
+      button,
+      input {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Unit 2 Assessment: JS DOM</h1>
+      <p>
+        Each of the sections below corresponds with a prompt in
+        <code>js-dom.js</code>. This file has already been imported into this HTML page via the
+        <code>&lt;script&gt;</code> tag below.
+      </p>
+    </header>
+    <main>
+      <section>
+        <h2>Log in/log out button</h2>
+
+        <button id="auth">Log in</button>
+      </section>
+
+      <section>
+        <h2>Send an alert</h2>
+
+        <form id="send-alert">
+          <label for="alert-message">Send an alert</label>
+          <input type="text" id="alert-message" name="alert" />
+          <button type="submit">Send alert</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Add an item</h2>
+
+        <button id="item-adder">Double-click to add an item</button>
+        <ol id="list">
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Change colors</h2>
+
+        <button id="blue">Turn stuff blue</button>
+        <button id="red">Turn stuff red</button>
+
+        <div id="color-changer">
+          <p class="changes-colors">This entire sentence should change colors.</p>
+          <p>
+            This sentence doesn't change colors except
+            <span class="changes-colors">for this phrase here</span>.
+          </p>
+          <ul>
+            <li class="changes-colors">This should change colors too!</li>
+            <li class="changes-colors">This item should also change colors.</li>
+            <li>But this item doesn't change colors.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Calculate factorial</h2>
+
+        <form id="factorial-calculator">
+          <label for="factorial-input">Enter a number to get its factorial</label>
+          <input type="number" id="factorial-input" name="number" />
+          <button type="submit">Calculate</button>
+        </form>
+
+        <p>Result: <span id="result"></span></p>
+      </section>
+
+      <section>
+        <h2>Validate a form</h2>
+        <form id="recommend-word">
+          <label for="word">Enter a word here</label>
+          <input type="text" name="word" id="word" />
+          <button type="submit">Submit</button>
+          <p class="form-feedback" style="color: red">
+            The word must be at least 4 characters long.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="js-dom.js"></script>
+  </body>
+</html>

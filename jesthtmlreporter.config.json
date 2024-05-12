@@ -1,0 +1,9 @@
+{
+  "pageTitle": "Unit 2 Assessment: Test Report",
+  "logo": "https://ed.devmountain.com/static/images/dm-logo.56952e1da050.png",
+  "outputPath": "wb-assess-2-report.html",
+  "includeFailureMsg": true,
+  "includeStackTrace": false,
+  "includeSuiteFailure": true,
+  "customScriptPath": "jesthtmlreporter.script.js"
+}
