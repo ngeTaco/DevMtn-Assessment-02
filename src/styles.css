@@ -1,0 +1,23 @@
+body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+.spacer {
+    height: 10px;
+}
+
+table {
+    margin-top: 50px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+/*Ask about 1px border showing as 0.8px in test runner*/
+
+th, td {
+    padding: 5px;
+}

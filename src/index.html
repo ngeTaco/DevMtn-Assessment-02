@@ -7,5 +7,62 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body></body>
+  <body>
+    <section class="charBuild">
+      <form>
+        <label>Character Name</label>
+        <input type="text" name="charName" />
+        <div class="spacer"></div>
+
+        <label>Jedi</label>
+        <input type="radio" name="charAlignment" value="jedi"/>
+        
+        <label>Sith</label>
+        <input type="radio" name="charAlignment" value="sith"/>
+        <div class="spacer"></div>
+
+        <label>Lightsaber Color</label>
+        <select name="lightsaberColor">
+          <option value="">Please Select a Lightsaber Color</option>
+          <option value="lsBlue">Blue</option>
+          <option value="lsGreen">Green</option>
+          <option value="lsRed">Red</option>
+          <option value="lsPurple">Purple</option>
+        </select>
+        <div class="spacer"></div>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section class="dataTable">
+      <table>
+        <tr>
+          <th>Planet</th>
+          <th>Environment</th>
+          <th>Population</th>
+        </tr>
+        <tr>
+          <td>Tatooine</td>
+          <td>Desert</td>
+          <td>200,000</td>
+        </tr>
+        <tr>
+          <td>Hoth</td>
+          <td>Ice</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Endor</td>
+          <td>Forest</td>
+          <td>30,000,000</td>
+        </tr>
+        <tr>
+          <td>Mustafar</td>
+          <td>Lava</td>
+          <td>10,000</td>
+        </tr>
+      </table>
+    </section>
+  </body>
 </html>
