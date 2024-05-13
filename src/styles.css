@@ -13,8 +13,8 @@ table {
 }
 
 table, th, td {
-    border: 1px solid white;
     box-sizing: border-box;
+    border: 1px solid white;
 }
 /*Ask about 1px border showing as 0.8px in test runner*/
 
