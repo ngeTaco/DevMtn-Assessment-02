@@ -13,7 +13,9 @@
 //     { firstName: 'Karlach', lastName: 'Cliffgate', location: 'Avernus' }
 //   ]);
 //   => ['Gale Dekarios', 'Wyll Ravengard', 'Karlach Cliffgate'];
-function getNames(people) {}
+function getNames(people) {
+  return people.map(person => person.firstName + " " + person.lastName)  
+}
 
 // Given an object representing a person, return their full name (first name and last name).
 // You MUST use object destructuring in your solution.
@@ -24,7 +26,10 @@ function getNames(people) {}
 // Ex.:
 //   getName({ firstName: 'Gale', lastName: 'Dekarios', location: 'Waterdeep' });
 //   => 'Gale Dekarios'
-function getNameUsingDestructuring(person) {}
+function getNameUsingDestructuring(person) {
+  const {firstName, lastName} = person;
+  return firstName + " " + lastName;
+};
 
 // Given an array of objects representing people, return a new array of the
 // people matching the given location.
@@ -43,7 +48,10 @@ function getNameUsingDestructuring(person) {}
 //     { firstName: 'Wyll', lastName: 'Ravengard', location: "Baldur's Gate" },
 //     { firstName: 'Astarion', lastName: 'Ancunin', location: "Baldur's Gate" }
 //   ];
-function getPeopleByLocation(people, location) {}
+function getPeopleByLocation(people, location) {
+  const bgCitizen = people.filter((citizen) => citizen.location === location);
+  return bgCitizen;
+}
 
 // Translate a phrase to pirate talk.
 //
@@ -72,7 +80,19 @@ const EN_PIRATE_LOOKUP = {
   hello: 'ahoy',
 };
 
-function translateToPirateTalk(phrase) {}
+function translateToPirateTalk(phrase) {
+  let piratePhrase = '';
+  let words = phrase.split(' ');
+  for (let index = 0; index < words.length; index++) {
+    let word = words[index];
+    if (EN_PIRATE_LOOKUP[word]) {
+      piratePhrase += EN_PIRATE_LOOKUP[word] + ' ';
+    } else {
+      piratePhrase += word + ' ';
+    }
+  }
+  return piratePhrase.trimEnd();
+};
 
 // Return the number of occurrences of each word in a string.
 // This function doesn't handle punctuation and is case-sensitive, so you can
