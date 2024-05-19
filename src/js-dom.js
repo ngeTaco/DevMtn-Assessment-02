@@ -7,7 +7,6 @@
 // When a user clicks on the button that says "Log In", its text should
 // update and say "Log out". If a user clicks on the button again, its text
 // should switch from "Log Out" to "Log In".
-//NEW:
 function changeButton() {
     const logButton = document.getElementById('auth');
     let logText = logButton.innerText;
@@ -25,13 +24,19 @@ document.getElementById('auth').addEventListener("click", changeButton);
 //
 // A user should be able to enter what they want the alert to say in the
 // text box. Then, they can submit the form to trigger the alert.
+function sendAlert(event){
+    const messageText = document.querySelector('#alert-message').value;
+    event.preventDefault();
+    alert(messageText);
+};
 
-/// TODO: replace this with your code
+document.querySelector('#send-alert').addEventListener("submit", sendAlert);
+
 
 // Add an item
 //
 // This is a pretty silly feature -- when a user clicks on the
-// button (the one that says "Double-ulick to add an item"), a new list
+// button (the one that says "Double-click to add an item"), a new list
 // item should appear.
 //
 // In other words, whenever a user clicks on the button, just
@@ -89,3 +94,15 @@ document.getElementById('auth').addEventListener("click", changeButton);
 // change the color of the text to red..
 
 /// TODO: replace this with your code
+document.querySelector('#recommend-word').addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    const recWord = document.querySelector('#word').value;
+    const feedbackText = document.querySelector('.form-feedback');
+    if (recWord.length <= 3) {
+        feedbackText.style.color = "red";
+        feedbackText.innerText = "The word must be at least 4 characters long"
+    } else if (recWord.length >= 4) {
+        feedbackText.style.color = "green";
+        feedbackText.innerText = "Thanks for your submission!";
+    }
+});
