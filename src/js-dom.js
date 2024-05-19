@@ -59,7 +59,23 @@ document.querySelector('#send-alert').addEventListener("submit", sendAlert);
 // Clicking on "Turn Stuff Red" should make text red and clicking on "Turn
 // Stuff Blue" should make text blue.
 
-/// TODO: replace this with your code
+const changesColor = document.querySelectorAll('.changes-colors');
+
+function changeColorBlue() {
+    changesColor.forEach(element => {
+    element.style.color = 'blue';
+    });
+}
+
+function changeColorRed() {
+    changesColor.forEach(element => {
+    element.style.color = 'red';
+    });
+}
+
+document.getElementById('blue').addEventListener('click', changeColorBlue);
+document.getElementById('red').addEventListener('click', changeColorRed);
+
 
 // Calculate factorial
 //
@@ -78,6 +94,17 @@ document.querySelector('#send-alert').addEventListener("submit", sendAlert);
 
 /// TODO: replace this with your code
 
+//NOTE: Factorial Code
+// function getFactorial(num) {
+//     if (num < 0) {
+//         return -1;
+//     } else if (num === 0) { 
+//         return 1;
+//     } else {
+//         return (num * getFactorial(num - 1));
+//     }
+// }
+
 // Validate a form
 //
 // This form is used to collect word recommendations from users. However, it
@@ -93,7 +120,6 @@ document.querySelector('#send-alert').addEventListener("submit", sendAlert);
 // the feedback text to say "The word must be at least 4 characters long." and
 // change the color of the text to red..
 
-/// TODO: replace this with your code
 document.querySelector('#recommend-word').addEventListener('submit', (evt) => {
     evt.preventDefault();
     const recWord = document.querySelector('#word').value;
