@@ -93,17 +93,26 @@ document.getElementById('red').addEventListener('click', changeColorRed);
 //   - puts the result of the function inside the "result" span
 
 /// TODO: replace this with your code
+const num = document.querySelector('#factorial-input');
+const result = document.querySelector('#result');
 
-//NOTE: Factorial Code
-// function getFactorial(num) {
-//     if (num < 0) {
-//         return -1;
-//     } else if (num === 0) { 
-//         return 1;
-//     } else {
-//         return (num * getFactorial(num - 1));
-//     }
-// }
+function getFactorial(num) {
+    if (num < 0) {
+        return -1;
+    } else if (num === 0) { 
+        return 1;
+    } else {
+        return (num * getFactorial(num - 1));
+    }
+}
+
+function presentFactorial(event) {
+    event.preventDefault();
+    result.innerText = getFactorial(num.value);
+}
+
+document.querySelector('#factorial-calculator').addEventListener('submit', presentFactorial);
+
 
 // Validate a form
 //
