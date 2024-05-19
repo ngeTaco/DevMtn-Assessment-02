@@ -7,8 +7,17 @@
 // When a user clicks on the button that says "Log In", its text should
 // update and say "Log out". If a user clicks on the button again, its text
 // should switch from "Log Out" to "Log In".
-
-/// TODO: replace this with your code
+//NEW:
+function changeButton() {
+    const logButton = document.getElementById('auth');
+    let logText = logButton.innerText;
+    if (logText === "Log in") {
+        logButton.innerText = "Log out"
+    } else {
+        logButton.innerText = "Log in"
+    }
+}
+document.getElementById('auth').addEventListener("click", changeButton);
 
 // Send an alert
 //
