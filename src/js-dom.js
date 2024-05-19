@@ -48,7 +48,16 @@ document.querySelector('#send-alert').addEventListener("submit", sendAlert);
 //     <li>Item</li>  <!-- This was added after double-clicking -->
 //   </ol>
 
-/// TODO: replace this with your code
+function addToList (){
+    const newItem = document.createElement('li');
+    newItem.innerText = "Item";
+
+    const list = document.querySelector('#list');
+    list.appendChild(newItem);
+}
+
+document.querySelector('#item-adder').addEventListener('dblclick', addToList)
+
 
 // Change colors
 //
