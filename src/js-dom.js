@@ -101,7 +101,6 @@ document.getElementById('red').addEventListener('click', changeColorRed);
 //   - calls your function that calculates a factorial
 //   - puts the result of the function inside the "result" span
 
-/// TODO: replace this with your code
 const num = document.querySelector('#factorial-input');
 const result = document.querySelector('#result');
 
